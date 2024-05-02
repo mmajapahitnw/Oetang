@@ -23,7 +23,7 @@ struct ExpenseCard: View {
         
         GroupBox {
             HStack {
-                Image(systemName: "person")
+                Image(systemName: ExpenseIcon.sampleData[avatarId ?? 0].image)
                     .frame(width: 50, height: 50)
                     .scaledToFit()
                     .background(.secondary, in: RoundedRectangle(cornerRadius: 10))

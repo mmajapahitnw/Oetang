@@ -23,11 +23,10 @@ struct ExpenseCard: View {
         
         GroupBox {
             HStack {
-                Image(systemName: ExpenseIcon.sampleData[avatarId ?? 0].image)
+                Image(ExpenseIcon.sampleData[avatarId ?? 0].image)
+                    .resizable()
                     .frame(width: 50, height: 50)
-                    .scaledToFit()
-                    .background(.secondary, in: RoundedRectangle(cornerRadius: 10))
-                
+                    
                 VStack(alignment: .leading) {
                     Text(name ?? "Expense Title")
                     Text("\(tanggal[0])-\(tanggal[1])-\(tanggal[2])")
@@ -48,7 +47,7 @@ struct ExpenseCard: View {
                 Spacer()
             }
         }
-        //.padding(.horizontal)
+        .padding(.horizontal)
     }
 }
 

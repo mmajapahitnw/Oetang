@@ -11,7 +11,7 @@ import SwiftUI
 struct OetangApp: App {
     var body: some Scene {
         WindowGroup {
-            GroupsList()
+            ContentView()
         }
     }
 }

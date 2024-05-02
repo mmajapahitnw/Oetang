@@ -5,6 +5,7 @@ struct trial: View {
 
     var body: some View {
         VStack {
+            
             Button(action: {
                 isDatePickerShown.toggle()
             }) {
@@ -26,6 +27,7 @@ struct DatePickerView: View {
 
     var body: some View {
         VStack {
+            Text("\(selectedDate)")
             DatePicker("Select a date", selection: $selectedDate, in: ...Date(), displayedComponents: .date)
                 .datePickerStyle(CompactDatePickerStyle())
                 .padding()

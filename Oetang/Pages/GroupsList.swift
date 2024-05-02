@@ -12,7 +12,7 @@ struct GroupsList: View {
         NavigationStack {
             ZStack {
                 Rectangle()
-                    .foregroundStyle(.mint.gradient.opacity(0.5))
+                    .foregroundStyle(.mint.gradient.opacity(0.25))
                     .edgesIgnoringSafeArea(.all)
                 ScrollView {
                     ForEach(Groups.sampleData, id: \.id) {group in

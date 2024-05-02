@@ -17,6 +17,7 @@
 		7A77C4372BE29E370043318A /* ExpenseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C4362BE29E370043318A /* ExpenseCard.swift */; };
 		7A77C4392BE2AB760043318A /* trial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C4382BE2AB760043318A /* trial.swift */; };
 		7A77C43B2BE327C00043318A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C43A2BE327C00043318A /* ContentView.swift */; };
+		7A77C43E2BE342180043318A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C43D2BE342180043318A /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		7A77C4362BE29E370043318A /* ExpenseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCard.swift; sourceTree = "<group>"; };
 		7A77C4382BE2AB760043318A /* trial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trial.swift; sourceTree = "<group>"; };
 		7A77C43A2BE327C00043318A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A77C43D2BE342180043318A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		7A77C41E2BE269140043318A /* Oetang */ = {
 			isa = PBXGroup;
 			children = (
+				7A77C43C2BE342070043318A /* Model */,
 				7A77C4332BE29E040043318A /* Pages */,
 				7A77C4302BE270C40043318A /* Components */,
 				7A77C42D2BE269740043318A /* DB */,
@@ -107,6 +110,14 @@
 				7A77C4342BE29E220043318A /* ExpensesList.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		7A77C43C2BE342070043318A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A77C43D2BE342180043318A /* Models.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				7A77C42F2BE2698B0043318A /* dummyData.swift in Sources */,
 				7A77C4322BE272CC0043318A /* GroupCard.swift in Sources */,
 				7A77C4222BE269140043318A /* GroupsList.swift in Sources */,
+				7A77C43E2BE342180043318A /* Models.swift in Sources */,
 				7A77C4392BE2AB760043318A /* trial.swift in Sources */,
 				7A77C4202BE269140043318A /* OetangApp.swift in Sources */,
 			);

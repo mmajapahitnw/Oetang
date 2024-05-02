@@ -9,7 +9,21 @@ import SwiftUI
 
 struct ExpensesList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack {
+                Rectangle()
+                    .foregroundStyle(.mint.gradient.opacity(0.25))
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    ForEach(Expenses.sampleData, id: \.id) {group in
+                        ExpenseCard()
+                    }
+                    Spacer()
+                }
+                .padding(.top)
+            }
+            .navigationTitle("Expenses")
+        }
     }
 }
 

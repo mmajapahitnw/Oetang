@@ -11,14 +11,14 @@ struct ExpenseCard: View {
     @State var id: Int?
     @State var name: String?
     @State var amount: Int?
-    @State var date: [Int]?
+    @State var date: Date?
     @State var avatarId: Int?
     @State var groupId: Int?
     @State var payerId: Int?
     @State var beneficiariesId: [Int]?
     
     var body: some View {
-        let tanggal = date ?? [0,0,0000,0,0]
+        let tanggal = date ?? inputDate(dateString: "2000-1-1")
         //let beneficiaries = beneficiariesId ?? [0,1,2,3]
         
         GroupBox {
@@ -26,23 +26,35 @@ struct ExpenseCard: View {
                 Image(ExpenseIcon.sampleData[avatarId ?? 0].image)
                     .resizable()
                     .frame(width: 50, height: 50)
-                    
+                
                 VStack(alignment: .leading) {
                     Text(name ?? "Expense Title")
-                    Text("\(tanggal[0])-\(tanggal[1])-\(tanggal[2])")
+                        .font(.headline.bold())
+                    Text(formatDate(date: tanggal))
+                        .font(.caption)
+                    
+                    
+                    
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(beneficiariesId ?? [0,1,2,3], id: \.self) {member in
-                                Image(systemName: Avatar.sampleData[Friends.sampleData[member].avatarId].image)
+                                Image(Avatar.sampleData[Friends.sampleData[member].avatarId].image)
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
                             }
                         }
                     }
+                    .scrollIndicators(.hidden)
                 }
                 
                 VStack {
                     Text(Friends.sampleData[payerId ?? 0].name)
+                        .font(.footnote.weight(.semibold))
                     Text(amount ?? 0, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .font(.body.bold())
                 }
+                
+                
                 
                 Spacer()
             }

@@ -13,6 +13,7 @@ struct GroupsList: View {
             ZStack {
                 Rectangle()
                     .foregroundStyle(.mint.gradient.opacity(0.25))
+                    //.foregroundColor(Color(red: 121/255, green: 156/255, blue: 118/255))
                     .edgesIgnoringSafeArea(.all)
                 ScrollView {
                     ForEach(Groups.sampleData, id: \.id) {group in

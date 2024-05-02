@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExpensesList: View {
+    let expensesData = Expenses.sampleData
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -16,7 +18,7 @@ struct ExpensesList: View {
                     .edgesIgnoringSafeArea(.all)
                 ScrollView {
                     ForEach(Expenses.sampleData, id: \.id) {group in
-                        ExpenseCard()
+                        ExpenseCard(name: group.name, amount: group.amount, date: group.date, avatarId: group.avatarId, payerId: group.payerId, beneficiariesId: group.beneficiariesId)
                     }
                     Spacer()
                 }

@@ -19,7 +19,6 @@ struct ExpenseCard: View {
     
     var body: some View {
         let tanggal = date ?? inputDate(dateString: "2000-1-1")
-        //let beneficiaries = beneficiariesId ?? [0,1,2,3]
         
         GroupBox {
             HStack {
@@ -29,9 +28,11 @@ struct ExpenseCard: View {
                 
                 VStack(alignment: .leading) {
                     Text(name ?? "Expense Title")
-                        .font(.headline.bold())
+                        .font(.subheadline.bold())
+                        .foregroundStyle(.primary)
                     Text(formatDate(date: tanggal))
-                        .font(.caption)
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
                     
                     
                     
@@ -49,14 +50,14 @@ struct ExpenseCard: View {
                 
                 VStack {
                     Text(Friends.sampleData[payerId ?? 0].name)
-                        .font(.footnote.weight(.semibold))
+                        .font(.caption.weight(.semibold))
+                        .foregroundColor(.secondary)
                     Text(amount ?? 0, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                        .font(.body.bold())
+                        .font(.subheadline.bold())
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.teal)
                 }
-                
-                
-                
-                Spacer()
+                .frame(maxWidth: 75)
             }
         }
         .padding(.horizontal)

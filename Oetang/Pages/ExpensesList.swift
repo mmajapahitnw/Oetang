@@ -10,6 +10,8 @@ import SwiftUI
 struct ExpensesList: View {
     let expensesData = Expenses.sampleData
     
+    @State private var newExpenseShown: Bool = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -25,6 +27,16 @@ struct ExpensesList: View {
                 .padding(.top)
             }
             .navigationTitle("Expenses")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Add Expense") {
+                        newExpenseShown = true
+                    }
+                }
+            }
+        }
+        .sheet(isPresented: $newExpenseShown) {
+            newExpenseSheet()
         }
     }
 }

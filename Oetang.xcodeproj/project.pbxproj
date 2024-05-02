@@ -18,6 +18,8 @@
 		7A77C4392BE2AB760043318A /* trial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C4382BE2AB760043318A /* trial.swift */; };
 		7A77C43B2BE327C00043318A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C43A2BE327C00043318A /* ContentView.swift */; };
 		7A77C43E2BE342180043318A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C43D2BE342180043318A /* Models.swift */; };
+		7A77C4402BE36CB70043318A /* newExpenseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C43F2BE36CB70043318A /* newExpenseSheet.swift */; };
+		7A77C4422BE3B9500043318A /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A77C4412BE3B9500043318A /* CheckBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		7A77C4382BE2AB760043318A /* trial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trial.swift; sourceTree = "<group>"; };
 		7A77C43A2BE327C00043318A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A77C43D2BE342180043318A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7A77C43F2BE36CB70043318A /* newExpenseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newExpenseSheet.swift; sourceTree = "<group>"; };
+		7A77C4412BE3B9500043318A /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				7A77C4312BE272CC0043318A /* GroupCard.swift */,
 				7A77C4362BE29E370043318A /* ExpenseCard.swift */,
+				7A77C4412BE3B9500043318A /* CheckBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			children = (
 				7A77C4212BE269140043318A /* GroupsList.swift */,
 				7A77C4342BE29E220043318A /* ExpensesList.swift */,
+				7A77C43F2BE36CB70043318A /* newExpenseSheet.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A77C4372BE29E370043318A /* ExpenseCard.swift in Sources */,
+				7A77C4402BE36CB70043318A /* newExpenseSheet.swift in Sources */,
 				7A77C4352BE29E220043318A /* ExpensesList.swift in Sources */,
+				7A77C4422BE3B9500043318A /* CheckBox.swift in Sources */,
 				7A77C43B2BE327C00043318A /* ContentView.swift in Sources */,
 				7A77C42F2BE2698B0043318A /* dummyData.swift in Sources */,
 				7A77C4322BE272CC0043318A /* GroupCard.swift in Sources */,
